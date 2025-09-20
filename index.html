@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block title %}Home - My Portfolio{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <div class="hero-container">
+        <div class="hero-content">
+            <h1>Hello, I'm <span class="highlight">John Doe</span></h1>
+            <h2>Web Developer & Designer</h2>
+            <p>I create beautiful, functional websites with a focus on user experience and clean code.</p>
+            <div class="hero-buttons">
+                <a href="{{ url_for('projects') }}" class="btn btn-primary">View My Work</a>
+                <a href="{{ url_for('contact') }}" class="btn btn-secondary">Contact Me</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="{{ url_for('static', filename='images/profile.jpg') }}" alt="Profile Picture">
+        </div>
+    </div>
+</section>
+
+<section class="skills">
+    <div class="container">
+        <h2 class="section-title">My Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <i class="fas fa-code"></i>
+                <h3>Web Development</h3>
+                <p>HTML, CSS, JavaScript, Python, Flask, React</p>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-paint-brush"></i>
+                <h3>UI/UX Design</h3>
+                <p>Figma, Adobe XD, Responsive Design</p>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-database"></i>
+                <h3>Database Management</h3>
+                <p>SQL, MongoDB, PostgreSQL</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
