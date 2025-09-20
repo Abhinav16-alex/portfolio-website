@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}About - My Portfolio{% endblock %}
+
+{% block content %}
+<section class="about">
+    <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>Hello! I'm John, a passionate web developer with 3 years of experience creating digital solutions. I specialize in building responsive websites and web applications with clean, efficient code.</p>
+                
+                <p>My journey in web development started during my Computer Science studies, and I've been hooked ever since. I enjoy solving complex problems and turning ideas into reality through code.</p>
+                
+                <p>When I'm not coding, you can find me hiking, reading tech blogs, or experimenting with new programming languages and frameworks.</p>
+                
+                <div class="about-buttons">
+                    <a href="{{ url_for('contact') }}" class="btn btn-primary">Get In Touch</a>
+                    <a href="#" class="btn btn-secondary">Download CV</a>
+                </div>
+            </div>
+            <div class="about-image">
+                <img src="{{ url_for('static', filename='images/profile.jpg') }}" alt="About Me">
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
